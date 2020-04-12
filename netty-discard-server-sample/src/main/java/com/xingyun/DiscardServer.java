@@ -8,10 +8,12 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author qing-feng.zhao
  */
+@Slf4j
 public class DiscardServer {
     /**
      * 端口
@@ -27,6 +29,7 @@ public class DiscardServer {
     }
 
     public static void main(String[] args) throws Exception {
+        log.info("please visit: http://127.0.0.1:8080");
         //默认端口8080
         int port = 8080;
         //如果传入了参数
